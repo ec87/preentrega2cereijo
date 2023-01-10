@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Inicio clases base */
+.bg-black {
+    background-color: #000000;
+}
+
+.bg-red {
+    background-color: #BF0000;
+}
+
+.bg-graystrong {
+    background-color: #424242;
+}
+
+.bg-graymedium {
+    background-color: #898A8A;
+}
+
+.bg-graylight {
+    background-color: #E0E5E4;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.bg-main {
+    background-image: url(../img/background/designblack.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    width: 100%;
+}
+
+.altura {
+    height: 25em;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.justify-content-space {
+    justify-content: space-between;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-right {
+    justify-content: right;
+}
+
+.align-items {
+    align-items: flex-start;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Fin clases base */
+
+.youtube{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+h1{
+    text-align: center;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.img-logo {
+    width: 20%;
+}
+
+.img-1 {
+    width: 1.25rem;
+}
+
+.img-prod {
+    width: 30rem;
+}
+
+.ig {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.espacioblanco {
+    padding: 1.875rem 1.875rem;
+}
+
+/* Gradiente */
+.lineargradient {
+    background: linear-gradient(to right, #898A8A, #000000);
+}
+
+/*Fin Gradiente */
+
+/* Animacion */
+@keyframes animateDiv {
+    0% {
+        width: 0px;
+    }
+
+    50% {
+        width: 10%;
+    }
+
+    100% {
+        width: 20%;
+    }
+}
+
+.animate {
+    animation-name: animateDiv;
+    animation-duration: 6s;
+    animation-iteration-count: initial;
+    animation-timing-function: linear;
+}
+
+/* Inicio Configuración Nav */
+
+nav div ul li {
+    margin-right: 3.125rem;
+    white-space: 0.625rem;
+}
+
+.botonera {
+    text-decoration: none;
+    color: #F2F2F2;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.botonera:hover {
+    color: #BF0000;
+}
+
+/* Fin config nav */
+
+.buscadorprod {
+    text-decoration: none;
+    color: #F2F2F2;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.buscadorprod:hover {
+    color: #BF0000;
+}
+
+/* Configuracion main */
+main {
+    height: auto;
+    color: #ffffff;
+
+}
+
+/* fin configuracion main */
+
+/* configuracion footer */
+
+footer {
+    display: flex;
+    justify-content: end;
+    align-content: space-between;
+    padding: 0.625rem 1.875rem;
+
+}
+
+footer a {
+    text-decoration: none;
+    color: #F2F2F2;
+    font-size: 1.1em;
+}
+
+footer a:hover {
+    color: #BF0000;
+}
+
+.redes{
+    display: flex;
+    align-items: flex-end;
+}
+
+/* fin configuracion footer */
+
+.productos {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    flex-wrap: wrap;
+}
+
+.producto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+#contenedor-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav"
+        "main"
+        "producto1"
+        "producto2"
+        "producto3"
+        "producto4"
+        "producto5"
+        "producto6"
+        "producto7"
+        "producto8"
+        "producto9"
+        "footer";
+}
+
+#nav {
+    grid-area: "nav";
+}
+
+#main {
+    grid-area: "main";
+}
+
+#alcohol-70 {
+    grid-area: "producto1";
+}
+
+#alcoholengel {
+    grid-area: "producto2";
+}
+
+#jabonliquido {
+    grid-area: "producto3";
+}
+
+#producto4 {
+    grid-area: "producto4";
+}
+
+#lavandina {
+    grid-area: "producto5";
+}
+
+#producto6 {
+    grid-area: "producto6";
+}
+
+#lavavajilla {
+    grid-area: "producto7";
+}
+
+#producto8 {
+    grid-area: "producto8";
+}
+
+#limpiavidrios {
+    grid-area: "producto9";
+}
+
+#footer {
+    grid-area: "footer";
+}
+
+
+@media (min-widht:1024px) {
+    .flex-direction {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .contenedor {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 20vh, 15vh, 20vh 20vh, 20vh, 5vh;
+        grid-template-areas:
+            "nav nav nav"
+            "main main main"
+            "producto1 producto2 producto3"
+            "producto4 producto5 producto6"
+            "producto7 producto8 producto9"
+            "footer footer footer";
+    }
+}
